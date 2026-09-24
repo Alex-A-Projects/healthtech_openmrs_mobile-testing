@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.js.map
+
+# WDIO / Appium artefacts
+allure-results/
+allure-report/
+.wdio/
+*.log
+npm-debug.log*
+
+# Playwright artefacts
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Local-only Claude session settings
+.claude/
+
+# iOS / Android app builds (when running on local simulators)
+app/
+build/

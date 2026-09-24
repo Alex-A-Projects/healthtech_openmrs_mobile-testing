@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node", "mocha", "@wdio/types", "expect-webdriverio", "@playwright/test"]
+  },
+  "include": [
+    "wdio.shared.conf.ts",
+    "wdio.android.conf.ts",
+    "wdio.ios.conf.ts",
+    "playwright.config.ts",
+    "global-setup.ts",
+    "tests/**/*.ts",
+    "pw-tests/**/*.ts",
+    "pages/**/*.ts",
+    "pw-pages/**/*.ts",
+    "data/**/*.ts",
+    "utils/**/*.ts",
+    "config/**/*.ts",
+    "constants/**/*.ts",
+    "types/**/*.ts",
+    "pw-fixtures/**/*.ts"
+  ],
+  "exclude": ["node_modules", "allure-results", "test-results", "playwright-report"]
+}
