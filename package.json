@@ -1,20 +1,14 @@
 {
   "name": "healthtech-openmrs-mobile-testing",
   "version": "1.0.0",
-  "description": "Mobile end-to-end test suite for OpenMRS O2 (web app rendered in mobile browsers) via WebdriverIO + Appium (iPhone 17 Pro / Samsung Galaxy S25) and Playwright (REST API + web-mobile emulation).",
+  "description": "Mobile end-to-end test suite for OpenMRS O2 (web app rendered in mobile browsers) via WebdriverIO + Appium on iPhone 17 Pro (iOS 26) and Samsung Galaxy S25 (Android 15).",
   "private": true,
   "type": "module",
   "scripts": {
     "test:android": "wdio run wdio.android.conf.ts",
     "test:ios": "wdio run wdio.ios.conf.ts",
     "test:both": "npm run test:android && npm run test:ios",
-    "test:ui-mobile": "playwright test --project=chromium-web-mobile-iphone --project=chromium-web-mobile-pixel",
-    "test:mobile": "npm run test:ui-mobile && npm run test:android && npm run test:ios",
-    "test": "npm run test:ui-mobile",
-    "test:headed": "playwright test --headed",
-    "test:debug": "playwright test --debug",
-    "test:report": "playwright show-report",
-    "test:list": "playwright test --list",
+    "test": "npm run test:both",
     "lint": "tsc --noEmit",
     "start:openmrs": "docker compose up -d && ./scripts/wait-for-openmrs.sh",
     "stop:openmrs": "docker compose down",
@@ -37,7 +31,6 @@
     "webdriverio": "^9.0.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.48.0",
     "@types/mocha": "^10.0.0",
     "@types/node": "^20.11.0",
     "ts-node": "^10.9.0",
